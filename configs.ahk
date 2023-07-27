@@ -1,0 +1,2 @@
+PEN_SLOT := 7
+FONT_COLOR_SLOT := 6
