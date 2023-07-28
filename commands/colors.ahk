@@ -1,17 +1,20 @@
 #Include %A_ScriptDir%\configs.ahk
 
-open_colors := Format("!{1}",FONT_COLOR_SLOT)
+open_colors := Format("!{1}", FONT_COLOR_SLOT)
 go_to_standard_color_row := "{Up 2}"
 
-Class TextColorFactory{
+Class TextColorFactory {
 
-    static CreateStandardRowColor(RowNavigationPlan){
-        return () => Send(open_colors RowNavigationPlan "{Enter}")
+    static CreateStandardRowColor(RowNavigationPlan) {
+
+        return (args*) => SendEvent(open_colors go_to_standard_color_row RowNavigationPlan "{Enter}")
     }
-    static CreateColor(NavigationPlan){
-        return () => Send(open_colors NavigationPlan)
+
+    static CreateColor(NavigationPlan) {
+        return (args*) => Send(open_colors NavigationPlan "{Enter}")
     }
 }
+
 
 class TextColors {
     static Purple := TextColorFactory.CreateStandardRowColor("")
@@ -21,3 +24,5 @@ class TextColors {
     static Pink := TextColorFactory.CreateStandardRowColor("{Home}")
     static Default := TextColorFactory.CreateColor("{Enter}")
 }
+
+textColor := TextColors()

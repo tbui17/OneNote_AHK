@@ -1,6 +1,6 @@
-PageBack(){
+PageBack() {
     Send("!{Left}")
 }
-PageForward(){
+PageForward() {
     Send("!{Right}")
 }

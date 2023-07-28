@@ -1,14 +1,14 @@
 #Include %A_ScriptDir%\commands\navigation.ahk
 
-OpenCommandPalette(){
+OpenCommandPalette() {
     Send("!q")
 }
 
-CopyBlock(){
+CopyBlock() {
     send("^a" "^c")
 }
 
-UseCommandPalette(commandName){
+UseCommandPalette(commandName) {
     OpenCommandPalette()
     Sleep(500)
     Send(commandName)
@@ -16,9 +16,9 @@ UseCommandPalette(commandName){
     Send("{Down}{Enter}")
 }
 
-CreateSubPageWithLink(){
+CreateSubPageWithLink() {
     result := InputBox("Enter the name of the subpage to create", "Create subpage").value
-    if (result == ""){
+    if (result == "") {
         return
     }
     UseCommandPalette("New Subpage")
@@ -27,20 +27,20 @@ CreateSubPageWithLink(){
     PageBack()
     Send("^v")
     PageForward()
-    
+
 }
 
 
-CollapseAllListsFromThisLevel(){
+CollapseAllListsFromThisLevel() {
     Send("!_")
 }
-OpenListByOneLevel(){
+OpenListByOneLevel() {
     Send("!{+}")
 }
-Highlight(){
+Highlight() {
     Send("^!h")
 }
 
-CopyLink(){
+CopyLink() {
     Send("{AppsKey}" "p" "p" "{Enter}")
 }

@@ -27,8 +27,11 @@ SetTitleMatchMode("RegEx") ; Match window titles by regular expressions
 ^!a::TextColors.Default()
 
 ; Pens
-!e::DrawingTools.Slot1() ; Eraser
-!r::DrawingTools.Slot2() ; Red
+!e::DrawingTools.PenSlot1() ; Eraser
+!r::DrawingTools.PenSlot2() ; Red
+
+; Shapes
+!v::DrawingTools.Rectangle()
 
 ; Navigation
 !q::PageBack()
@@ -41,6 +44,7 @@ SetTitleMatchMode("RegEx") ; Match window titles by regular expressions
 !`::OpenCommandPalette()
 !t::CopyLink()
 !y::CreateSubPageWithLink()
+
 
 
 ; Mouse scrolling
