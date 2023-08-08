@@ -5,9 +5,10 @@ open_shapes := Format("!{1}", SHAPE_SLOT)
 
 
 Class DrawingToolFactory {
-
+    
     static CreatePenSlot(NavigationPlan) {
-        return (args*) => Send(open_pens "{End}" NavigationPlan "{Enter}")
+        
+        return (args*) => SendEvent(open_pens "{End}" NavigationPlan "{Enter}")
     }
 
     static CreateShape(NavigationPlan) {

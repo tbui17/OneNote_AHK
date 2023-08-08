@@ -22,7 +22,7 @@ class TextColors {
     static Green := TextColorFactory.CreateStandardRowColor("{Left 3}")
     static Red := TextColorFactory.CreateStandardRowColor("{Home}{Right}")
     static Pink := TextColorFactory.CreateStandardRowColor("{Home}")
-    static Default := TextColorFactory.CreateColor("{Enter}")
+    static Default := TextColorFactory.CreateColor("")
 }
 
 textColor := TextColors()

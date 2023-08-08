@@ -15,6 +15,7 @@ SetTitleMatchMode("RegEx") ; Match window titles by regular expressions
 ; ==================== OneNote hotkeys ====================
 
 
+SetKeyDelay(2,1)
 
 
 
